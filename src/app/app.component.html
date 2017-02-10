@@ -1,3 +1,19 @@
-<h1>
-  {{title}}
-</h1>
+<div class="container">
+  <nav class="navbar navbar-default">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <a class="navbar-brand" href="#">Angular2</a>
+      </div>
+      <ul class="nav navbar-nav">
+        <li routerLinkActive="active"><a [routerLink]="['/slider']">slider</a></li>
+        <li routerLinkActive="active"><a [routerLink]="['/copy']">copy</a></li>
+        <li routerLinkActive="active"><a [routerLink]="['/table']">table</a></li>
+        <li routerLinkActive="active"><a [routerLink]="['/login']">login</a></li>
+        <li routerLinkActive="active"><a [routerLink]="['/flex']">flex</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <router-outlet></router-outlet>
+
+</div>

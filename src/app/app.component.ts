@@ -3,8 +3,16 @@ import { Component } from '@angular/core';
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css']
+  styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'app works!';
+
+  printLocalStorage() {
+    console.dir(localStorage);
+  }
+
+  public authenticated() {
+    return !!localStorage.getItem('user');
+  };
+
 }

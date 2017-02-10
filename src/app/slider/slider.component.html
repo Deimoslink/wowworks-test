@@ -1,0 +1,26 @@
+<div class="slider"
+     (mouseenter)="stopAutoSlide()"
+     (mouseleave)="startAutoSlide()">
+  <div class="slider-inner">
+    <div *ngFor="let item of pictures; let i = index; trackBy: trackByFn" class="slide">
+      <img *ngIf="i === currentIndex" [src]="item.url" alt="">
+    </div>
+  </div>
+
+  <div class="slider-button-wrapper">
+    <button class="slider-button" (click)="prevSlide()">
+      <i class="fa fa-caret-left"></i>
+    </button>
+    <button class="slider-button" (click)="nextSlide()">
+      <i class="fa fa-caret-right"></i>
+    </button>
+  </div>
+
+  <div class="slider-nav-wrapper">
+    <ul class="slider-nav-list">
+      <li *ngFor="let item of pictures; let i = index; trackBy: trackByFn"
+          [ngClass]="{'active': i === currentIndex}"
+          (click)="switchSelected(i)"></li>
+    </ul>
+  </div>
+</div>

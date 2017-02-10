@@ -1,0 +1,97 @@
+<div class="container">
+
+  <button type="button" class="btn btn-default" (click)="requestData()">Request Data</button>
+  <button type="button" class="btn btn-default" (click)="addItem(testItem)">Post Data</button>
+
+  <h1>Skyrim quest weapons</h1>
+
+  <div>
+      <div class="form-group">
+        <div class="input-group">
+          <input type="text" class="form-control custom-form-control" placeholder="Type phrase for search" [(ngModel)]="search">
+          <div class="custom-input-group-addon"><i class="fa fa-search"></i></div>
+        </div>
+      </div>
+
+    <!--<div class="button-wrapper">-->
+      <!--<button class="btn" ng-click="archive()" ng-disabled="!archivable">Archive Selected</button>-->
+      <!--<button class="btn orange" ng-click="go('/items/add')">Add New</button>-->
+    <!--</div>-->
+  </div>
+
+  <table class="table">
+
+    <thead>
+    <tr>
+      <td>
+        Image
+      </td>
+      <td>
+        <a href="" (click)="sortTable($event, 'Name')">
+          Name
+          <span *ngIf="sortingField === 'Name' && !reverseSorting" class="fa fa-caret-up"></span>
+          <span *ngIf="sortingField === 'Name' && reverseSorting" class="fa fa-caret-down"></span>
+          <span *ngIf="sortingField !== 'Name'" class="fa fa-sort"></span>
+        </a>
+      </td>
+      <td>
+        <a href="" (click)="sortTable($event, 'Type')">
+          Type
+          <span *ngIf="sortingField === 'Type' && !reverseSorting" class="fa fa-caret-up"></span>
+          <span *ngIf="sortingField === 'Type' && reverseSorting" class="fa fa-caret-down"></span>
+          <span *ngIf="sortingField !== 'Type'" class="fa fa-sort"></span>
+        </a>
+      </td>
+      <td>
+        <a href="" (click)="sortTable($event, 'Tempering')">
+          Tempering
+          <span *ngIf="sortingField === 'Tempering' && !reverseSorting" class="fa fa-caret-up"></span>
+          <span *ngIf="sortingField === 'Tempering' && reverseSorting" class="fa fa-caret-down"></span>
+          <span *ngIf="sortingField !== 'Tempering'" class="fa fa-sort"></span>
+        </a>
+      </td>
+      <td>
+        <a href="" (click)="sortTable($event, 'Weight')">
+          Weight
+          <span *ngIf="sortingField === 'Weight' && !reverseSorting" class="fa fa-caret-up"></span>
+          <span *ngIf="sortingField === 'Weight' && reverseSorting" class="fa fa-caret-down"></span>
+          <span *ngIf="sortingField !== 'Weight'" class="fa fa-sort"></span>
+        </a>
+      </td>
+      <td>
+        <a href="" (click)="sortTable($event, 'Damage')">
+          Damage
+          <span *ngIf="sortingField === 'Damage' && !reverseSorting" class="fa fa-caret-up"></span>
+          <span *ngIf="sortingField === 'Damage' && reverseSorting" class="fa fa-caret-down"></span>
+          <span *ngIf="sortingField !== 'Damage'" class="fa fa-sort"></span>
+        </a>
+      </td>
+      <td>
+        <a href="" (click)="sortTable($event, 'Value')">
+          Value
+          <span *ngIf="sortingField === 'Value' && !reverseSorting" class="fa fa-caret-up"></span>
+          <span *ngIf="sortingField === 'Value' && reverseSorting" class="fa fa-caret-down"></span>
+          <span *ngIf="sortingField !== 'Value'" class="fa fa-sort"></span>
+        </a>
+      </td>
+    </tr>
+    </thead>
+
+    <tbody *ngIf="data">
+      <tr *ngFor="let item of data | search : search | sortBy: {Field: sortingField} : reverseSorting; let i = index; trackBy: trackByFn;">
+        <td>
+          <img *ngIf="item.Image" [src]="'public/pics/table/48px-SR-icon-weapon-'+i+'.png'" alt="">
+        </td>
+        <td>{{item.Name}}</td>
+        <td>{{item.Type}}</td>
+        <td>{{item.Tempering}}</td>
+        <td>{{angParseInt(item.Weight)}}</td>
+        <td>{{angParseInt(item.Damage)}}</td>
+        <td>{{angParseInt(item.Value)}}</td>
+        <td><a href="" type="button" class="delete-button" (click)="deleteCurrent($event, item)"><i class="fa fa-minus-square" aria-hidden="true"></i></a></td>
+      </tr>
+    </tbody>
+
+  </table>
+
+</div>
