@@ -7,22 +7,23 @@
         </div>
 
         <ul class="nav navbar-nav">
-          <li routerLinkActive="active"><a class="navbar-override" [routerLink]="['/slider']">Задания</a></li>
-          <li routerLinkActive="active"><a class="navbar-override" [routerLink]="['/flex']">Финансы</a></li>
-          <li routerLinkActive="active"><a class="navbar-override" [routerLink]="['/copy']">Компания</a></li>
-          <li routerLinkActive="active"><a class="navbar-override" [routerLink]="['/login']">Статистика</a></li>
+          <li routerLinkActive="active"><a class="navbar-override" [routerLink]="['/tasks']">Задания</a></li>
+          <li routerLinkActive="active"><a class="navbar-override" [routerLink]="['/finance']">Финансы</a></li>
+          <li routerLinkActive="active"><a class="navbar-override" [routerLink]="['/company']">Компания</a></li>
+          <li routerLinkActive="active"><a class="navbar-override" [routerLink]="['/statistics']">Статистика</a></li>
         </ul>
 
-        <ul class="nav navbar-nav navbar-right">
+        <ul *ngIf="authenticated()" class="nav navbar-nav navbar-right">
 
-          <li><a href="" class="navbar-override">Баланс 150000Р</a></li>
-          <li><a class="navbar-override"href="#"><img src="../assets/notifications-icon.svg" alt=""></a></li>
+          <li><a href="#" class="navbar-override">Баланс 150000Р</a></li>
+          <li><a href="#" class="navbar-override notifications-item" (click)="toggleNotifications($event)">
+              <div *ngIf="thereAreNotifications" class="notifications-icon-spot"></div>
+              <img src="../assets/notifications-icon.svg" alt="">
+          </a></li>
           <li class="dropdown">
             <a href="#"  class="navbar-override dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Александр Линьков <span class="caret"></span></a>
             <ul class="dropdown-menu">
-              <li><a href="#">Action</a></li>
-              <li><a href="#">Another action</a></li>
-              <li><a href="#">Something else here</a></li>
+              <li><a href="#" (click)="logout($event)">Logout&nbsp;&nbsp;<i class="fa fa-sign-out" aria-hidden="true"></i></a></li>
             </ul>
           </li>
           <li><a class="navbar-override" href="#"><img src="../assets/help-icon.svg" alt=""></a></li>

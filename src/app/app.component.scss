@@ -16,3 +16,23 @@
 .navbar-brand{
   color: $white;
 }
+.notifications-item{
+  position: relative;
+  .notifications-icon-spot{
+    left: 28px;
+    top: 22px;
+    position: absolute;
+    height: 5px;
+    width: 5px;
+    border-radius: 50%;
+    background-color: $pinkish-orange;
+  }
+}
+
+@media (max-width: 768px) {
+  .notifications-item {
+    .notifications-icon-spot {
+      top: 18px;
+    }
+  }
+}

@@ -21,6 +21,7 @@ export class TableComponent implements OnInit {
   public data: any;
   public postResponse: any;
   public router: any;
+  public filterConditions: Array<boolean> = [false,false,false]; //Personal, Night, Urgent
 
   // Schema for http://beta.json-generator.com
   // [

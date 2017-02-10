@@ -1,19 +1,34 @@
 <div class="container">
 
-  <div class="form-group">
-    <div class="input-group">
-      <input Body="text" class="form-control custom-form-control" placeholder="Поиск по слову" [(ngModel)]="search">
-      <div class="custom-input-group-addon"><i class="fa fa-search"></i></div>
+  <div class="row">
+    <div class="col-md-4">
+      <div class="form-group">
+        <div class="input-group">
+          <input Body="text" class="form-control custom-form-control" placeholder="Поиск по слову" [(ngModel)]="search">
+          <div class="custom-input-group-addon"><i class="fa fa-search"></i></div>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-8 checkbox-wrapper">
+        <label class="checkbox-inline">
+          <input [(ngModel)]="filterConditions[0]" type="checkbox" value="">Персональное
+        </label>
+        <label class="checkbox-inline">
+          <input [(ngModel)]="filterConditions[1]" type="checkbox" value="">Ночное
+        </label>
+        <label class="checkbox-inline">
+          <input [(ngModel)]="filterConditions[2]" type="checkbox" value="">Срочное
+        </label>
     </div>
   </div>
 
-  <table class="table">
+  <table *ngIf="data && (data | filter : filterConditions | search : search).length" class="table">
     <thead>
     <tr>
-      <td>
+      <td nowrap>
         ID
       </td>
-      <td>
+      <td nowrap>
         <a href="" (click)="sortTable($event, 'Loc')">
           Город
           <span *ngIf="sortingField === 'Loc' && !reverseSorting" class="fa fa-caret-up"></span>
@@ -21,7 +36,7 @@
           <span *ngIf="sortingField !== 'Loc'" class="fa fa-sort"></span>
         </a>
       </td>
-      <td>
+      <td nowrap>
         <a href="" (click)="sortTable($event, 'Body')">
           Название
           <span *ngIf="sortingField === 'Body' && !reverseSorting" class="fa fa-caret-up"></span>
@@ -29,7 +44,7 @@
           <span *ngIf="sortingField !== 'Body'" class="fa fa-sort"></span>
         </a>
       </td>
-      <td>
+      <td nowrap>
         <a href="" (click)="sortTable($event, 'Deadline')">
           Выполнить до
           <span *ngIf="sortingField === 'Deadline' && !reverseSorting" class="fa fa-caret-up"></span>
@@ -37,7 +52,7 @@
           <span *ngIf="sortingField !== 'Deadline'" class="fa fa-sort"></span>
         </a>
       </td>
-      <td>
+      <td nowrap>
         <a href="" (click)="sortTable($event, 'Price')">
           Сумма
           <span *ngIf="sortingField === 'Price' && !reverseSorting" class="fa fa-caret-up"></span>
@@ -48,18 +63,27 @@
     </tr>
     </thead>
 
-    <tbody *ngIf="data">
-      <tr *ngFor="let item of data | search : search | sortBy: {Field: sortingField} : reverseSorting; let i = index; trackBy: trackByFn;">
+    <tbody>
+      <tr *ngFor="let item of data
+                  | filter : filterConditions
+                  | search : search
+                  | sortBy: {Field: sortingField} : reverseSorting;
+                  let i = index;
+                  trackBy: trackByFn;">
         <td>{{item.id}}</td>
         <td>{{item.Loc}}</td>
         <td>{{item.Body}}</td>
-        <td>{{item.Deadline}}</td>
+        <td>{{item.Deadline | date}}</td>
         <td>{{item.Price}}</td>
         <td><a href="" type="button" class="delete-button" (click)="deleteCurrent($event, item)"><i class="fa fa-minus-square" aria-hidden="true"></i></a></td>
       </tr>
     </tbody>
 
   </table>
+
+  <div *ngIf="!(data && (data | filter : filterConditions | search : search).length)" class="well">
+    Ничего не найдено =(
+  </div>
 
 </div>
 

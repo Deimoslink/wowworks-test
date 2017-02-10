@@ -1,14 +1,19 @@
 @import "../../css/vars";
 
-.form-group{
-  margin-top: 50px;
+.checkbox-wrapper{
+  padding-top: 8px;
+  & label{
+    margin-right: 20px;
+    color: $warm-grey;
+    &:hover{
+      color: $black;
+    }
+  }
 }
-
 .custom-form-control {
   border-radius: 2px !important;
   padding-right: 24px;
 }
-
 .custom-input-group-addon {
   line-height: 34px;
   vertical-align: middle;
@@ -22,28 +27,4 @@
 }
 a {
   text-decoration: none !important;
-}
-.navbar-background{
-  border-bottom: 1px solid $pinkish-grey;
-}
-.table-nav-item{
-  cursor: pointer;
-  padding-bottom: 20px;
-  margin-right: 40px;
-  color: $pinkish-grey;
-  margin-bottom: -1px;
-  border-bottom: 1px solid $pinkish-grey;
-  &:hover{
-    color: $black;
-    border-bottom: 1px solid $pinkish-orange;
-  }
-}
-.badge{
-  padding: 1px 5px;
-  font-size: 10px;
-  font-weight: 500;
-  margin-left: 1em;
-  background-color: $white;
-  border: 1px solid $pinkish-grey;
-  color: $pinkish-grey;
 }

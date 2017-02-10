@@ -25,10 +25,11 @@ a {
 }
 .navbar-background{
   border-bottom: 1px solid $pinkish-grey;
+  margin-bottom: 40px;
 }
 .table-nav-item{
   cursor: pointer;
-  padding-bottom: 20px;
+  padding: 20px 0;
   margin-right: 40px;
   color: $pinkish-grey;
   margin-bottom: -1px;
@@ -36,14 +37,23 @@ a {
   &:hover, &.active{
     color: $black;
     border-bottom: 1px solid $pinkish-orange;
+    & .badge{
+      border: 1px solid $black;
+      color: $black;
+    }
   }
 }
 .badge{
-  padding: 1px 5px;
+  padding: 3px 5px;
   font-size: 10px;
   font-weight: 500;
   margin-left: 1em;
   background-color: $white;
   border: 1px solid $pinkish-grey;
   color: $pinkish-grey;
+  &.badge-selected{
+    background-color: $pinkish-orange;
+    border: none;
+    color: $white;
+  }
 }

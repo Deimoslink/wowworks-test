@@ -5,13 +5,13 @@ import 'rxjs/add/operator/map';
 import {CounterRefreshService} from "../service/counter-refresh.service";
 
 @Component({
-  selector: 'app-slider',
-  templateUrl: './slider.component.html',
-  styleUrls: ['./slider.component.scss']
+  selector: 'app-tasks',
+  templateUrl: './tasks.component.html',
+  styleUrls: ['./tasks.component.scss']
 })
 
 @Injectable()
-export class SliderComponent implements OnInit {
+export class TasksComponent implements OnInit {
 
   public tasksCounter: any = {
     'new':0,
@@ -33,12 +33,9 @@ export class SliderComponent implements OnInit {
   requestData() {
     this.http.get('http://localhost:3000/tasks').map((res: Response) => res.json()).subscribe(
       (res: any) => {
-
         for (let task of res) {
           this.tasksCounter[task.Status]++;
         }
-
-        console.log(this.tasksCounter);
       },
       err => {
         console.log(err);

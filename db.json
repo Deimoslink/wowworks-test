@@ -475,17 +475,6 @@
     },
     {
       "Status": "pending",
-      "Price": "81,647",
-      "Personal": true,
-      "Night": true,
-      "Urgent": false,
-      "Deadline": "Thursday, June 9, 2016 10:04 PM",
-      "Body": "Magna ea ea deserunt do elit ea occaecat nulla dolor ipsum sit voluptate pariatur. Mollit commodo quis officia est amet cillum dolore reprehenderit dolore. Consequat id esse et sunt ad voluptate proident exercitation. Irure et veniam voluptate sunt exercitation. Nisi eu reprehenderit et ullamco Lorem esse qui incididunt quis pariatur. Reprehenderit laborum consectetur eiusmod ea qui.",
-      "Loc": "Тольятти",
-      "id": 66
-    },
-    {
-      "Status": "pending",
       "Price": "51,177",
       "Personal": false,
       "Night": false,
@@ -750,17 +739,6 @@
     },
     {
       "Status": "pending",
-      "Price": "49,194",
-      "Personal": false,
-      "Night": true,
-      "Urgent": false,
-      "Deadline": "Monday, October 3, 2016 11:28 AM",
-      "Body": "Aute eiusmod nulla sint laboris nisi elit eiusmod. Labore deserunt culpa consequat aliqua. Do officia adipisicing esse excepteur in. Nostrud non et officia consequat nostrud Lorem magna id elit voluptate in officia elit. Sit duis fugiat qui exercitation duis dolore cupidatat dolor do sint quis fugiat culpa ex. Officia amet magna veniam aliqua amet veniam eu ullamco. Mollit et id sunt eiusmod reprehenderit amet nostrud commodo.",
-      "Loc": "Владивосток",
-      "id": 93
-    },
-    {
-      "Status": "pending",
       "Price": "47,319",
       "Personal": false,
       "Night": true,
@@ -826,186 +804,35 @@
       "id": 99
     }
   ],
-  "items": [
+  "users": [
     {
       "id": "1",
-      "Damage": 8,
-      "Image": "SR-icon-weapon-AncientNordSword.png",
-      "Name": "Ceremonial Sword",
-      "Type": "1 Hand Sword",
-      "Tempering": "Steel Ingot;",
-      "Weight": 12,
-      "Value": 5
+      "Name": "admin",
+      "Password": "admin"
     },
     {
       "id": "2",
-      "Damage": 8,
-      "Image": "SR-icon-weapon-AncientNordSword.png",
-      "Name": "Hjalti's Sword",
-      "Type": "1 Hand Sword",
-      "Tempering": "Not possible",
-      "Weight": 12,
-      "Value": 13
+      "Name": "deimoslink",
+      "Password": "deimoslink"
     },
     {
-      "id": "3",
-      "Damage": 8,
-      "Image": "SR-icon-weapon-AncientNordSword.png",
-      "Name": "Red Eagle's Fury",
-      "Type": "1 Hand Sword",
-      "Tempering": "Steel Ingot;",
-      "Weight": 12,
-      "Value": 97
+      "Password": "123456",
+      "id": "rkueUciOg"
     },
     {
-      "id": "4",
-      "Damage": 9,
-      "Image": "SR-icon-weapon-AncientNordWarAxe.png",
-      "Name": "Ceremonial Axe",
-      "Type": "1 Hand War Axe",
-      "Tempering": "Steel Ingot;",
-      "Weight": 14,
-      "Value": 5
+      "Name": "username",
+      "Password": "123",
+      "id": "ry2r8qsux"
     },
     {
-      "id": "5",
-      "Damage": 2,
-      "Image": "SR-icon-weapon-DragonPriestStaff.png",
-      "Name": "Dragon Priest Staff",
-      "Type": "Staff",
-      "Tempering": "N/A",
-      "Weight": 8,
-      "Value": 1431
+      "Name": "getnewone",
+      "Password": "555then666",
+      "id": "Hy8CIqjde"
     },
     {
-      "id": "6",
-      "Damage": 12,
-      "Image": "SR-icon-weapon-Glass Sword.png",
-      "Name": "Grimsever",
-      "Type": "1 Hand Sword†",
-      "Tempering": "Refined Malachite;",
-      "Weight": 14,
-      "Value": 727
-    },
-    {
-      "id": "7",
-      "Damage": 7,
-      "Image": "SR-icon-weapon-Hunting Bow.png",
-      "Name": "Dravin's Bow",
-      "Type": "Bow",
-      "Tempering": "Leather Strips;",
-      "Weight": 7,
-      "Value": 50
-    },
-    {
-      "id": "8",
-      "Damage": 5,
-      "Image": "SR-icon-weapon-Iron Dagger.png",
-      "Name": "Alessandra's Dagger",
-      "Type": "1 Hand Dagger",
-      "Tempering": "Not possible",
-      "Weight": 1,
-      "Value": 10
-    },
-    {
-      "id": "9",
-      "Damage": 7,
-      "Image": "SR-icon-weapon-Iron Sword.png",
-      "Name": "Amren's Family Sword",
-      "Type": "1 Hand Sword",
-      "Tempering": "Iron Ingot;",
-      "Weight": 9,
-      "Value": 25
-    },
-    {
-      "id": "10",
-      "Damage": 6,
-      "Image": "SR-icon-weapon-Kahvozien'sFang.png",
-      "Name": "Kahvozein's Fang",
-      "Type": "1 Hand Dagger",
-      "Tempering": "Not possible",
-      "Weight": 5,
-      "Value": 9
-    },
-    {
-      "id": "11",
-      "Damage": 21,
-      "Image": "SR-icon-weapon-OrcishWarhammer.png",
-      "Name": "Shagrol's Warhammer",
-      "Type": "2 Hand Warhammer",
-      "Tempering": "Orichalcum Ingot;",
-      "Weight": 26,
-      "Value": 200
-    },
-    {
-      "id": "12",
-      "Damage": 7,
-      "Image": "SR-icon-weapon-Rusty Mace.png",
-      "Name": "Rusty Mace",
-      "Type": "1 Hand Mace",
-      "Tempering": "Not possible",
-      "Weight": 13,
-      "Value": 5
-    },
-    {
-      "id": "13",
-      "Damage": 17,
-      "Image": "SR-icon-weapon-SteelGreatsword.png",
-      "Name": "Balgruuf's Greatsword",
-      "Type": "2 Hand Greatsword",
-      "Tempering": "Steel Ingot;",
-      "Weight": 17,
-      "Value": 200
-    },
-    {
-      "id": "14",
-      "Damage": 8,
-      "Image": "SR-icon-weapon-SteelSword.png",
-      "Name": "Steel Sword",
-      "Type": "1 Hand Sword",
-      "Tempering": "Not possible",
-      "Weight": 10,
-      "Value": 23
-    },
-    {
-      "id": "15",
-      "Damage": 8,
-      "Image": "SR-icon-weapon-SteelSword.png",
-      "Name": "Queen Freydis's Sword",
-      "Type": "1 Hand Sword",
-      "Tempering": "Steel Ingot;",
-      "Weight": 10,
-      "Value": 45
-    },
-    {
-      "id": "16",
-      "Damage": 11,
-      "Image": "SR-icon-weapon-SteelSword.png",
-      "Name": "Vilkas's Sword",
-      "Type": "1 Hand Sword",
-      "Tempering": "Steel Ingot;",
-      "Weight": 10,
-      "Value": 70
-    },
-    {
-      "id": "17",
-      "Damage": 22,
-      "Image": "SR-icon-weapon-The Rueful Axe.png",
-      "Name": "The Rueful Axe",
-      "Type": "2 Hand Battleaxe",
-      "Tempering": "Ebony Ingot;",
-      "Weight": 10,
-      "Value": 1183
-    },
-    {
-      "id": "18",
-      "Damage": 25,
-      "Image": "SR-icon-weapon-Wuuthrad.png",
-      "Name": "Wuuthrad",
-      "Type": "2 Hand Battleaxe",
-      "Tempering": "Not possible",
-      "Weight": 25,
-      "Value": 2000
+      "Name": "123",
+      "Password": "123",
+      "id": "Bk1bPqiOg"
     }
   ]
 }
