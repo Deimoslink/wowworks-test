@@ -12,7 +12,15 @@ import { FlexComponent } from "./flex/flex.component";
 
 const APP_ROUTES: Routes = [
   { path: 'copy', component: InfoComponent, canActivate: [LoggedInGuard] },
-  { path: 'slider', component: SliderComponent, canActivate: [LoggedInGuard] },
+  { path: 'slider', component: SliderComponent, canActivate: [LoggedInGuard],
+    children: [
+      {path: 'new', component: TableComponent},
+      {path: 'active', component: TableComponent},
+      {path: 'canceled', component: TableComponent},
+      {path: 'finished', component: TableComponent},
+      {path: 'pending', component: TableComponent},
+      {path: 'drafts', component: TableComponent}
+    ]},
   { path: 'table', component: TableComponent, canActivate: [LoggedInGuard] },
   { path: 'login', component: LoginComponent },
   { path: 'flex', component: FlexComponent },

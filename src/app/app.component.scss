@@ -1,0 +1,18 @@
+@import "../css/vars";
+
+.navbar {
+  border-radius: 0;
+  border: none;
+  margin: 0;
+  a.navbar-override {
+    height:60px;
+    line-height: 30px;
+    vertical-align: middle;
+  }
+}
+.navbar-background{
+  background-color: $black;
+}
+.navbar-brand{
+  color: $white;
+}

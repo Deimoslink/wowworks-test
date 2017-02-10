@@ -7,6 +7,8 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
 
+  public dropdown:boolean;
+
   printLocalStorage() {
     console.dir(localStorage);
   }
@@ -14,5 +16,10 @@ export class AppComponent {
   public authenticated() {
     return !!localStorage.getItem('user');
   };
+
+  dropdownToggle(){
+    console.log(this.dropdown);
+    this.dropdown = !this.dropdown;
+  }
 
 }

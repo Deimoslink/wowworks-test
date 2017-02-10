@@ -12,6 +12,7 @@ import { SliderComponent } from './slider/slider.component';
 import { LoginComponent } from './login/login.component';
 
 import { UserService } from './service/user.service';
+import { CounterRefreshService } from './service/counter-refresh.service';
 import { TableComponent } from './table/table.component';
 import { SortByPipe } from './pipes/sort-by.pipe';
 import { SearchPipe } from './pipes/search.pipe';
@@ -35,7 +36,7 @@ import { FlexComponent } from './flex/flex.component';
     HttpModule,
     routing
   ],
-  providers: [UserService, LoggedInGuard],
+  providers: [UserService, CounterRefreshService, LoggedInGuard],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
