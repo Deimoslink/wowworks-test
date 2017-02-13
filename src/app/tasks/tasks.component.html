@@ -3,10 +3,10 @@
 </div>
 
 <div class="navbar-background">
-  <div class="container">
+  <div class="container" style="position: relative">
     <ul class="nav navbar-nav">
       <li routerLinkActive="active" class="table-nav-item" [routerLink]="['/tasks/new']">
-          <span>Новые</span><span class="badge">{{tasksCounter['new']}}</span>
+        <span>Новые</span><span class="badge">{{tasksCounter['new']}}</span>
       </li>
       <li routerLinkActive="active" class="table-nav-item" [routerLink]="['/tasks/active']">
           <span>В работе</span><span class="badge badge-selected">{{tasksCounter['active']}}</span>
@@ -24,7 +24,9 @@
           <span>Черновики</span><span class="badge">{{tasksCounter['drafts']}}</span>
       </li>
     </ul>
+    <div class="add-item-button" [routerLink]="['/add']">+</div>
   </div>
+
 </div>
 
 

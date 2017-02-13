@@ -1,8 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
-
 import { routing } from './app.routing';
 import { LoggedInGuard } from './app.guard';
 
@@ -19,6 +18,7 @@ import { FilterPipe } from './pipes/filter.pipe';
 import { FinanceComponent } from './finance/finance.component';
 import { StatisticsComponent } from "./statistics/statistics.component";
 import { CompanyComponent } from "./company/company.component";
+import { AddComponent } from './add/add.component';
 
 
 @NgModule({
@@ -32,11 +32,13 @@ import { CompanyComponent } from "./company/company.component";
     SortByPipe,
     SearchPipe,
     FilterPipe,
-    FinanceComponent
+    FinanceComponent,
+    AddComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
+    ReactiveFormsModule,
     HttpModule,
     routing
   ],

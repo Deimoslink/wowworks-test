@@ -1,17 +1,6 @@
 {
   "tasks": [
     {
-      "Status": "drafts",
-      "Price": "26,977",
-      "Personal": true,
-      "Night": true,
-      "Urgent": true,
-      "Deadline": "Monday, August 17, 2015 11:16 PM",
-      "Body": "Ea veniam voluptate tempor nostrud sit esse tempor velit adipisicing amet ex consequat. Eu minim velit amet enim adipisicing laboris magna qui. id est adipisicing magna minim quis irure deserunt deserunt Lorem sunt.",
-      "Loc": "Казань",
-      "id": 1
-    },
-    {
       "Status": "finished",
       "Price": "84,087",
       "Personal": false,
@@ -197,17 +186,6 @@
       "Body": "Tempor anim elit nisi Lorem ut dolore est. Ex consequat ea velit duis veniam do sunt excepteur nisi nulla voluptate est elit ex. Incididunt irure mollit eiusmod ex excepteur anim laborum duis sint esse consequat Lorem est aliquip. Sunt quis ea ea nulla proident qui Lorem aliquip commodo nisi fugiat culpa.",
       "Loc": "Владивосток",
       "id": 27
-    },
-    {
-      "Status": "drafts",
-      "Price": "44,547",
-      "Personal": true,
-      "Night": true,
-      "Urgent": true,
-      "Deadline": "Friday, April 3, 2015 2:41 PM",
-      "Body": "Quis occaecat laborum deserunt do culpa velit consequat adipisicing fugiat magna id in incididunt. Nisi aliquip est proident sit voluptate esse laboris consequat minim duis velit. Sunt aliquip pariatur consequat ipsum ipsum proident dolor fugiat excepteur reprehenderit. Anim magna consequat velit aliquip voluptate. Irure voluptate cillum reprehenderit ad adipisicing. Lorem cillum irure voluptate culpa. Cillum commodo consequat nostrud irure culpa ipsum enim sit aliqua voluptate commodo.",
-      "Loc": "Тольятти",
-      "id": 28
     },
     {
       "Status": "canceled",
@@ -802,6 +780,17 @@
       "Body": "Velit et velit veniam magna ex velit quis anim aliquip do duis. Dolore excepteur qui qui dolor cupidatat consequat nulla do officia ullamco. Do irure consequat dolore ut aliqua proident culpa. Anim eu dolore id aliqua ipsum cupidatat enim id. Ullamco cillum sunt ex reprehenderit. Minim Lorem non amet excepteur nulla cillum sunt in ipsum.",
       "Loc": "Красноярск",
       "id": 99
+    },
+    {
+      "Body": "Сделать что-нибудь хорошее.",
+      "Loc": "Сызрань",
+      "Deadline": "завтра",
+      "Urgent": false,
+      "Night": false,
+      "Personal": true,
+      "Price": "100000",
+      "Status": "new",
+      "id": 100
     }
   ],
   "users": [

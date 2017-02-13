@@ -9,6 +9,7 @@ import { LoggedInGuard } from './app.guard';
 import { FinanceComponent } from "./finance/finance.component";
 import {StatisticsComponent} from "./statistics/statistics.component";
 import {CompanyComponent} from "./company/company.component";
+import {AddComponent} from "./add/add.component";
 
 
 const APP_ROUTES: Routes = [
@@ -24,6 +25,7 @@ const APP_ROUTES: Routes = [
   { path: 'statistics', component: StatisticsComponent, canActivate: [LoggedInGuard] },
   { path: 'company', component: CompanyComponent, canActivate: [LoggedInGuard] },
   { path: 'finance', component: FinanceComponent, canActivate: [LoggedInGuard] },
+  { path: 'add', component: AddComponent, canActivate: [LoggedInGuard] },
   { path: 'login', component: LoginComponent},
   { path: '', redirectTo: 'tasks/active', pathMatch: 'full' }
 ];
