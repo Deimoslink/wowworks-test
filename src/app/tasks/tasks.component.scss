@@ -80,3 +80,8 @@ a {
     background-color:#f97d53;
   }
 }
+@media (max-width: 768px) {
+  .navbar-background{
+    border-bottom: none;
+  }
+}

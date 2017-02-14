@@ -74,7 +74,7 @@
         <td>{{item.Loc}}</td>
         <td>{{item.Body}}</td>
         <td>{{item.Deadline | date}}</td>
-        <td>{{item.Price}}</td>
+        <td>{{item.Price | number:'.2' }}&#8381;</td>
         <td><a href="" type="button" class="delete-button" (click)="deleteCurrent($event, item)"><i class="fa fa-minus-square" aria-hidden="true"></i></a></td>
       </tr>
     </tbody>

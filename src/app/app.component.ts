@@ -9,15 +9,22 @@ import {Router} from "@angular/router";
 
 export class AppComponent {
 
+  public dropdownView: boolean = false;
   public thereAreNotifications:boolean = true;
 
   constructor(private router: Router) {
 
   }
 
+  toggleDropdown(event){
+    event.preventDefault();
+    this.dropdownView = !this.dropdownView
+  }
+
   logout(event) {
-    event.preventDefault;
+    event.preventDefault();
     localStorage.removeItem('user');
+    this.router.navigate(['/login']);
   }
 
   public authenticated() {

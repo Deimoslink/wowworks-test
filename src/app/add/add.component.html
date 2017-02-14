@@ -2,16 +2,25 @@
 
   <h2>Добавление нового задания</h2>
 
-
   <form class="well" (submit)="addTask()">
     <div class="row">
       <div class="col-md-4 form-group">
         <label for="location">Город</label>
-        <input [(ngModel)]="task.Loc" required type="text" id="location" name="location" class="form-control">
+        <select (change)="setLocation(selectedCity)" [(ngModel)]="selectedCity" required id="location" name="location" class="form-control">
+          <option *ngFor="let city of cities; let i = index; trackBy: trackByFn;" [value]="city">{{city}}</option>
+        </select>
         <label for="deadline">Крайний срок</label>
-        <input disabled [(ngModel)]="task.Deadline" required type="text" id="deadline" name="deadline" class="form-control">
+        <div class="input-group">
+        <input required (focus)="unselect($event)" [ngModel]="task.Deadline | date" type="text" id="deadline" name="deadline" class="form-control disabled">
+          <div class="input-group-btn">
+            <button (click)="GENrandomDate()" class="btn btn-default" type="button">
+              <i class="fa fa-calendar"></i>
+            </button>
+          </div>
+        </div>
+
         <label for="price">Цена</label>
-        <input [(ngModel)]="task.Price" required type="text" id="price" name="price" class="form-control">
+        <input [(ngModel)]="task.Price" required type="number" id="price" name="price" class="form-control">
       </div>
       <div class="col-md-8 form-group">
         <label for="task">Описание</label>
@@ -33,8 +42,6 @@
 
     <button type="submit" class="btn btn-default">Добавить задание</button>
   </form>
-
-  <button (click)="GENrandomDate()" type="button" class="btn btn-default">Генерате рондом дейт</button>
 </div>
 
 

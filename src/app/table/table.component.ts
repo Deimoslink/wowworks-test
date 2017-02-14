@@ -26,15 +26,16 @@ export class TableComponent implements OnInit {
   // Schema for http://beta.json-generator.com
   // [
   //   {
-  //     'repeat(5, 10)': {
+  //     'repeat(100)': {
   //       id: '{{index()}}',
+  //       Loc: '{{random("Самара", "Москва", "Санкт-петербург", "Тверь", "Казань", "Уфа", "Новосибирск", "Нижний Новгород", "Тольятти", "Сочи", "Владивосток", "Красноярск", "Архангельск")}}',
   //       Body: '{{lorem(1, "paragraphs")}}',
-  //       Deadline: '{{moment(this.date(new Date(2014, 0, 1), new Date())).format("LLLL")}}',
+  //       Deadline: '{{date(new Date(2014, 0, 1), new Date()).getTime()}}',
   //       Urgent: '{{bool()}}',
   //       Night: '{{bool()}}',
   //       Personal: '{{bool()}}',
-  //       Price: '{{integer(1000, 100000, "0,0₽")}}',
-  //       Status: '{{random("new", "active", "pending", "finished", "canceled", "draft")}}'
+  //       Price: '{{integer(1000, 100000)}}',
+  //       Status: '{{random("new", "active", "pending", "finished", "canceled", "drafts")}}'
   //     }
   //   }
   //   ]
